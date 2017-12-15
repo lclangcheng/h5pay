@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <script src="{{cdn}}/h5play/js/reset.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>支付</title>
+    <link rel="stylesheet" href="{{cdn}}/h5play/css/reset.css">
+    <link rel="stylesheet" href="{{cdn}}/h5play/css/common.css">
+</head>
+<script>
+    var cdn = "{{cdn}}";
+</script>
+<body>
+    <div class="fromData" style="display:none"></div>
+    <div class="app">
+        <div class="payBack"></div>
+        <div class="payContainer">
+            <div class="payTitle">
+                <img src="{{cdn}}/h5play/images/btn_window_close.png"
+                     alt="关闭" class="payTitleImg">
+                <span class="payTitleText">请选择支付方式</span>
+            </div>
+            <div class="payProp">
+                <span class="payPropName">大礼包</span>
+                <div class="payPropMoney">￥<span>50.99</span></div>
+            </div>
+            <div class="payMode">
+                <div class="payModeList clearfix" data-active="wachat" data-pay-type="56">
+                    <img src="{{cdn}}/h5play/images/icon_wxpay.png" alt="微信" class="payModeLogo">
+                    <span class="payModetext">微信支付</span>
+                    <div class="payModeConfirm">
+                        <img src="{{cdn}}/h5play/images/icon_select.png" class="payPitchNo">
+                        <img src="{{cdn}}/h5play/images/icon_select_s.png" class="payPitchOff">
+                    </div>
+                </div>
+                <div class="payModeList clearfix payActive" data-active="alipay" data-pay-type="49">
+                    <img src="{{cdn}}/h5play/images/icon_alipay.png" alt="支付宝" class="payModeLogo">
+                    <span class="payModetext">支付宝支付</span>
+                    <div class="payModeConfirm">
+                        <img src="{{cdn}}/h5play/images/icon_select.png" class="payPitchNo">
+                        <img src="{{cdn}}/h5play/images/icon_select_s.png" class="payPitchOff">
+                    </div>
+                </div>
+            </div>
+            <div class="payLeaveFor">
+                <button>前往支付</button>
+            </div>
+        </div>
+    </div>
+    <h3 class="errText"></h3>
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="{{cdn}}/h5play/js/jquery.url.js"></script>
+    <script src="{{cdn}}/h5play/config/config.js?v=1.0.2"></script>
+    <script src="{{cdn}}/h5play/js/common.js?v=1.0.2"></script>
+		<script src="{{cdn}}/h5play/js/TreeMapAndMd5.js"></script>
+    <script>pay();</script>
+</body>
+
+</html>
